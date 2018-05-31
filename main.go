@@ -114,7 +114,7 @@ func runTestCase(testFile string, testName string) bool {
   cmd_str :=  "testeth"
   cmd_args := []string{"-t", "GeneralStateTests", "--", "--singlenet", "Byzantium", "--vm", "~/libhera.so",  "--singletest", testFile, testName, "--evmc", "evm2wasm.js=true"}
 
-  fmt.Println(cmd_str)
+  fmt.Println(cmd_args)
 
   cmd := exec.Command(cmd_str, cmd_args...)
 	//cmd.Env = os.Environ()
