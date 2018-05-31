@@ -114,6 +114,8 @@ func runTestCase(testFile string, testName string) bool {
   cmd_str :=  "testeth"
   cmd_args := []string{"-t", "GeneralStateTests", "--", "--singlenet", "Byzantium", "--vm", "~/libhera.so",  "--singletest", testFile, testName, "--evmc", "evm2wasm.js=true"}
 
+  fmt.Println(cmd_str)
+
   cmd := exec.Command(cmd_str, cmd_args...)
 	//cmd.Env = os.Environ()
 	//cmd.Env = append(cmd.Env, "ETHEREUM_TEST_PATH=/home/jwasinger/projects/tests")
