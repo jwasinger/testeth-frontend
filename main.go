@@ -112,7 +112,7 @@ func merge(cs ...<-chan TestResult) <-chan TestResult{
 
 func runTestCase(testFile string, testName string) bool {
   cmd_str :=  "testeth"
-  cmd_args := []string{"-t", "GeneralStateTests", "--", "--singlenet", "Byzantium", "--vm", "hera",  "--singletest", testFile, testName, "--evmc", "evm2wasm.cpp=true"}
+  cmd_args := []string{"-t", "GeneralStateTests", "--", "--singlenet", "Byzantium", "--vm", "~/libhera.so",  "--singletest", testFile, testName, "--evmc", "evm2wasm.js=true"}
 
   cmd := exec.Command(cmd_str, cmd_args...)
 	//cmd.Env = os.Environ()
